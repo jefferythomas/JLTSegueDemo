@@ -28,6 +28,8 @@
 		7B9DAB4816D9C88400F7102A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9DAB1816D9C88300F7102A /* Foundation.framework */; };
 		7B9DAB5016D9C88400F7102A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B9DAB4E16D9C88400F7102A /* InfoPlist.strings */; };
 		7B9DAB5316D9C88400F7102A /* JLTSegueDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DAB5216D9C88400F7102A /* JLTSegueDemoTests.m */; };
+		7B9DAB6416D9CC1900F7102A /* JLTReplaceSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DAB5F16D9CC1900F7102A /* JLTReplaceSegue.m */; };
+		7B9DAB6516D9CC1900F7102A /* JLTTabSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DAB6116D9CC1900F7102A /* JLTTabSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,11 @@
 		7B9DAB4F16D9C88400F7102A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B9DAB5116D9C88400F7102A /* JLTSegueDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLTSegueDemoTests.h; sourceTree = "<group>"; };
 		7B9DAB5216D9C88400F7102A /* JLTSegueDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLTSegueDemoTests.m; sourceTree = "<group>"; };
+		7B9DAB5E16D9CC1900F7102A /* JLTReplaceSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTReplaceSegue.h; sourceTree = "<group>"; };
+		7B9DAB5F16D9CC1900F7102A /* JLTReplaceSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTReplaceSegue.m; sourceTree = "<group>"; };
+		7B9DAB6016D9CC1900F7102A /* JLTTabSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTTabSegue.h; sourceTree = "<group>"; };
+		7B9DAB6116D9CC1900F7102A /* JLTTabSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTTabSegue.m; sourceTree = "<group>"; };
+		7B9DAB6216D9CC1900F7102A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +105,7 @@
 		7B9DAB0A16D9C88300F7102A = {
 			isa = PBXGroup;
 			children = (
+				7B9DAB5C16D9CC1900F7102A /* JLTSegue */,
 				7B9DAB1C16D9C88300F7102A /* JLTSegueDemo */,
 				7B9DAB4B16D9C88400F7102A /* JLTSegueDemoTests */,
 				7B9DAB1516D9C88300F7102A /* Frameworks */,
@@ -175,6 +183,18 @@
 				7B9DAB4E16D9C88400F7102A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7B9DAB5C16D9CC1900F7102A /* JLTSegue */ = {
+			isa = PBXGroup;
+			children = (
+				7B9DAB5E16D9CC1900F7102A /* JLTReplaceSegue.h */,
+				7B9DAB5F16D9CC1900F7102A /* JLTReplaceSegue.m */,
+				7B9DAB6016D9CC1900F7102A /* JLTTabSegue.h */,
+				7B9DAB6116D9CC1900F7102A /* JLTTabSegue.m */,
+				7B9DAB6216D9CC1900F7102A /* README.md */,
+			);
+			path = JLTSegue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +316,8 @@
 				7B9DAB2716D9C88300F7102A /* JLTAppDelegate.m in Sources */,
 				7B9DAB3316D9C88400F7102A /* JLTFirstViewController.m in Sources */,
 				7B9DAB3A16D9C88400F7102A /* JLTSecondViewController.m in Sources */,
+				7B9DAB6416D9CC1900F7102A /* JLTReplaceSegue.m in Sources */,
+				7B9DAB6516D9CC1900F7102A /* JLTTabSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
