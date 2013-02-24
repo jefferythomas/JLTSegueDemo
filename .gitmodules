@@ -1,0 +1,3 @@
+[submodule "JLTSegue"]
+	path = JLTSegue
+	url = https://github.com/jefferythomas/JLTSegue.git
