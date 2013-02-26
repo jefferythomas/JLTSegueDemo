@@ -136,8 +136,6 @@
 		7B9DAB1C16D9C88300F7102A /* JLTSegueDemo */ = {
 			isa = PBXGroup;
 			children = (
-				7B9DAB2516D9C88300F7102A /* JLTAppDelegate.h */,
-				7B9DAB2616D9C88300F7102A /* JLTAppDelegate.m */,
 				7B9DAB2E16D9C88400F7102A /* MainStoryboard.storyboard */,
 				7B9DAB3116D9C88400F7102A /* JLTFirstViewController.h */,
 				7B9DAB3216D9C88400F7102A /* JLTFirstViewController.m */,
@@ -159,6 +157,8 @@
 				7B9DAB1F16D9C88300F7102A /* InfoPlist.strings */,
 				7B9DAB2216D9C88300F7102A /* main.m */,
 				7B9DAB2416D9C88300F7102A /* JLTSegueDemo-Prefix.pch */,
+				7B9DAB2516D9C88300F7102A /* JLTAppDelegate.h */,
+				7B9DAB2616D9C88300F7102A /* JLTAppDelegate.m */,
 				7B9DAB2816D9C88300F7102A /* Default.png */,
 				7B9DAB2A16D9C88300F7102A /* Default@2x.png */,
 				7B9DAB2C16D9C88300F7102A /* Default-568h@2x.png */,
