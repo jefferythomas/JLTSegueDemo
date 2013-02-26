@@ -75,7 +75,6 @@
 		7B9DAB5F16D9CC1900F7102A /* JLTReplaceSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTReplaceSegue.m; sourceTree = "<group>"; };
 		7B9DAB6016D9CC1900F7102A /* JLTTabSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTTabSegue.h; sourceTree = "<group>"; };
 		7B9DAB6116D9CC1900F7102A /* JLTTabSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTTabSegue.m; sourceTree = "<group>"; };
-		7B9DAB6216D9CC1900F7102A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +191,6 @@
 				7B9DAB5F16D9CC1900F7102A /* JLTReplaceSegue.m */,
 				7B9DAB6016D9CC1900F7102A /* JLTTabSegue.h */,
 				7B9DAB6116D9CC1900F7102A /* JLTTabSegue.m */,
-				7B9DAB6216D9CC1900F7102A /* README.md */,
 			);
 			path = JLTSegue;
 			sourceTree = "<group>";
