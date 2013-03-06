@@ -26,4 +26,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark JLTTabSegueViewControllerChooser
+
+- (NSUInteger)indexOfDestinationViewControllerForTabSegueIdentifier:(NSString *)identifier
+{
+    return 1;
+}
+
 @end

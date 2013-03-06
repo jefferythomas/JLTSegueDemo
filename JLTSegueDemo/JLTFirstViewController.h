@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JLTTabSegue.h"
 
-@interface JLTFirstViewController : UIViewController
+@interface JLTFirstViewController : UIViewController <JLTTabSegueViewControllerChooser>
 
 @end

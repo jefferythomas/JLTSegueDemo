@@ -7,26 +7,65 @@
 //
 
 #import "JLTSegueDemoTests.h"
+#import "JLTTabSegue.h"
 
 @implementation JLTSegueDemoTests
 
-- (void)setUp
+- (UITabBarController *)tabBarController
 {
-    [super setUp];
-    
-    // Set-up code here.
+    UIWindow *window = [UIApplication sharedApplication].delegate.window;
+    return (UITabBarController *)window.rootViewController;
 }
 
-- (void)tearDown
+- (UIViewController *)topViewControllerAtIndex:(NSUInteger)index
 {
-    // Tear-down code here.
-    
-    [super tearDown];
+    UINavigationController *navController = [self tabBarController].viewControllers[index];
+    return navController.topViewController;
 }
 
-- (void)testExample
+- (void)testRootViewController
 {
-    STFail(@"Unit tests are not implemented yet in JLTSegueDemoTests");
+    STAssertTrue([[self tabBarController] isKindOfClass:[UITabBarController class]], nil);
+}
+
+- (void)testTabSegueWithChooser
+{
+    UIViewController *source = [self topViewControllerAtIndex:0];
+    STAssertTrue([source respondsToSelector:@selector(indexOfDestinationViewControllerForTabSegueIdentifier:)], nil);
+
+    JLTTabSegue *segue = [[JLTTabSegue alloc] initWithIdentifier:@"tab3" source:source destination:nil];
+
+    STAssertEqualObjects(segue.destinationViewController, [self tabBarController].viewControllers[1], nil);
+}
+
+- (void)testTabSegueWithIdentifierNoSpace
+{
+    UIViewController *source = [self topViewControllerAtIndex:1];
+    STAssertFalse([source respondsToSelector:@selector(indexOfDestinationViewControllerForTabSegueIdentifier:)], nil);
+
+    JLTTabSegue *segue = [[JLTTabSegue alloc] initWithIdentifier:@"tab0" source:source destination:nil];
+
+    STAssertEqualObjects(segue.destinationViewController, [self tabBarController].viewControllers[0], nil);
+}
+
+- (void)testTabSegueWithIdentifierWithSpace
+{
+    UIViewController *source = [self topViewControllerAtIndex:1];
+    STAssertFalse([source respondsToSelector:@selector(indexOfDestinationViewControllerForTabSegueIdentifier:)], nil);
+
+    JLTTabSegue *segue = [[JLTTabSegue alloc] initWithIdentifier:@"tab 0" source:source destination:nil];
+
+    STAssertEqualObjects(segue.destinationViewController, [self tabBarController].viewControllers[0], nil);
+}
+
+- (void)testTabSegueWithLongIdentifier
+{
+    UIViewController *source = [self topViewControllerAtIndex:1];
+    STAssertFalse([source respondsToSelector:@selector(indexOfDestinationViewControllerForTabSegueIdentifier:)], nil);
+
+    JLTTabSegue *segue = [[JLTTabSegue alloc] initWithIdentifier:@"Foo tab 0 Bar" source:source destination:nil];
+
+    STAssertEqualObjects(segue.destinationViewController, [self tabBarController].viewControllers[0], nil);
 }
 
 @end
