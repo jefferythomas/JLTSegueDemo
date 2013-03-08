@@ -58,6 +58,16 @@
     STAssertEqualObjects(segue.destinationViewController, [self tabBarController].viewControllers[0], nil);
 }
 
+- (void)testTabSegueWithIdentifierWithMultipleSpacesHyphensAndUnderscores
+{
+    UIViewController *source = [self topViewControllerAtIndex:1];
+    STAssertFalse([source respondsToSelector:@selector(indexOfDestinationViewControllerForTabSegueIdentifier:)], nil);
+
+    JLTTabSegue *segue = [[JLTTabSegue alloc] initWithIdentifier:@"tab - _ - _ - 0" source:source destination:nil];
+
+    STAssertEqualObjects(segue.destinationViewController, [self tabBarController].viewControllers[0], nil);
+}
+
 - (void)testTabSegueWithLongIdentifier
 {
     UIViewController *source = [self topViewControllerAtIndex:1];
@@ -66,6 +76,26 @@
     JLTTabSegue *segue = [[JLTTabSegue alloc] initWithIdentifier:@"Foo tab 0 Bar" source:source destination:nil];
 
     STAssertEqualObjects(segue.destinationViewController, [self tabBarController].viewControllers[0], nil);
+}
+
+- (void)testTabSegueFailureWithPrefixedCharacter
+{
+    UIViewController *source = [self topViewControllerAtIndex:1];
+    STAssertFalse([source respondsToSelector:@selector(indexOfDestinationViewControllerForTabSegueIdentifier:)], nil);
+
+    JLTTabSegue *segue = nil;
+    STAssertThrows(segue = [[JLTTabSegue alloc] initWithIdentifier:@"stab 0" source:source destination:nil], nil);
+    STAssertNil(segue, nil);
+}
+
+- (void)testTabSegueFailureWithSuffixedCharacter
+{
+    UIViewController *source = [self topViewControllerAtIndex:1];
+    STAssertFalse([source respondsToSelector:@selector(indexOfDestinationViewControllerForTabSegueIdentifier:)], nil);
+
+    JLTTabSegue *segue = nil;
+    STAssertThrows(segue = [[JLTTabSegue alloc] initWithIdentifier:@"tab 0s" source:source destination:nil], nil);
+    STAssertNil(segue, nil);
 }
 
 @end
